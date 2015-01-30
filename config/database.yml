@@ -23,8 +23,5 @@ test:
 production:
   adapter: postgresql
   database: dbrpdosrjos6dd
-  host: ec2-54-243-51-102.compute-1.amazonaws.com
-  user: fbxsuzmcjcoobe
-  password: 5kVJo_PY5_VyhO5AEMVwzB5fg9
   port: 5432
 
