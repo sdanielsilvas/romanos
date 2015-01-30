@@ -1,0 +1,9 @@
+
+<div style="padding: 20px;">
+<%= form_tag("/index", method: "get") do |f| %>
+	<p>Ingrese un entero [1-1000]: </p><input type="text" id="numero" name="numero"></input>
+<%end%>
+<br>
+<p>El numero en romano es: </p>
+<%=@roman%>
+</div>
