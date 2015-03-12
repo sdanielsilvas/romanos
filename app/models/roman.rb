@@ -1,11 +1,17 @@
 class Roman < ActiveRecord::Base
+	def convertir (num)
+		num=num.to_s
+		r=unidad(num)
+		return r
+	end
+
 	def convertir(num)
 		n=[]
 		x = num.to_s.split('')
 		reverse=x.reverse
 		Integer i=0
 		reverse.each do |number|
-			#index=reverse.index(number)
+			index=reverse.index(number)
 			if(i==3)
 				return "M"
 			end
@@ -42,30 +48,30 @@ class Roman < ActiveRecord::Base
 	end
 
 	def unidad(num)
-		case num
-		when "0"
-		  return ""
-		when "1"
-		  return "I"
+	 	case num
+	 	when "0"
+	 	  return ""
+	 	when "1"
+	 	  return "I"
 		when "2"
-		  return "II"
-		when "3"
-		  return "III"
-	  	when "4"
-		  return "IV"
-		when "5"
-		  return "V"
-	  	when "6"
-		  return "VI"
-	  	when "7"
-		  return "VII"
-		when "8"
-		  return "VIII"
-		when "9"
-		  return "IX"
+	 	  return "II"
+	 	when "3"
+	 	  return "III"
+	   	when "4"
+	 	  return "IV"
+	 	when "5"
+	 	  return "V"
+	   	when "6"
+	 	  return "VI"
+	   	when "7"
+	 	  return "VII"
+	 	when "8"
+	 	  return "VIII"
+	 	when "9"
+	 	  return "IX"
 
-		end
-	end
+	 	end
+	 end
 
 	def decena(num)
 		case num

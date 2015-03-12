@@ -9,6 +9,9 @@ describe Roman do
 	it "convierte el 5" do
 		expect(roman.convertir(5)).to eq("V")
 	end	
+	it "prueba unidad" do
+		expect(roman.unidad("5")).to eq("V")
+	end
 	it "convierte el 11" do
 		expect(roman.convertir(11)).to eq("XI")
 	end
